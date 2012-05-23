@@ -9,11 +9,11 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : "Blogg"
+title : "Tech Blog"
 tagline: Site Tagline
 author :
   name : Artem Avetisyan
-  email : artemave@gmail.com
+#  email : artemave@gmail.com
   github : artemave
   twitter : artemave
   #feedburner : feedname
