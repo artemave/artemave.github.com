@@ -200,3 +200,9 @@ Speaking of slow, REST-assured adds quite a bit of an overhead to test startup, 
 Wrap up time. Let us recap what REST-assured is and what it is useful for. REST-assured is a locally deployable service that you can configure at runtime to respond to arbitrary HTTP requests. As such, it can be used to serve test fixtures to an application under test. It also records all requests made to it, so that more control-type requests can also be verified.
 
 So that is it for the introduction of REST-assured. You can give it a try [right here](http://rest-assured.herokuapp.com/) right now. Have a nice day. And don’t let them catch you.
+
+
+&nbsp;
+&nbsp;
+
+_Special thanks go to [Sam Starling](https://github.com/samstarling) for proof reading_.
