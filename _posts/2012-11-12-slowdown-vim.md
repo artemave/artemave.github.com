@@ -20,3 +20,9 @@ This first occurred to me once when I got stuck editing a perl script over ssh t
 And that is how [SlowDown.vim](https://github.com/artemave/slowdown.vim) was born. Perhaps the only vim plugin on the planet that (deliberately) makes user experience worse. And possibly the smallest one too.
 
 Check it out. It is fun!
+
+
+&nbsp;
+&nbsp;
+
+_Special thanks to [Adrian Longley](https://github.com/adiel) for proof reading_.
