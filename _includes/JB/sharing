@@ -1,8 +1,62 @@
-{% if site.safe and site.JB.sharing.provider and page.JB.sharing != false %}
 
-{% case site.JB.sharing.provider %}
-{% when "custom" %}
-  {% include custom/sharing %}
-{% endcase %}
+<ul class="post-share ulno mob">
 
-{% endif %}
+<!-- Hacker News -->
+<li class="hn"><span id="hnews"></span></li>
+
+<!-- Twitter -->
+<li class="tw"><a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ page.title }}" data-via="{{ site.JB.sharing.twitter.via }}" data-related="{{ site.author.twitter }}" data-count="{{ site.JB.sharing.twitter.count }}" data-size="{{ site.JB.sharing.twitter.size }}">Tweet</a>
+</li>
+
+<!-- Google+ -->
+<li class="gp"><div class="g-plusone" data-size="{{ site.JB.sharing.googleplus.size }}" data-annotation="{{ site.JB.sharing.googleplus.annotation }}" data-width="{{ site.JB.sharing.googleplus.width }}"></div>
+</li>
+
+<!-- Reddit -->
+<li>
+<a href="http://en.reddit.com/submit" onclick="window.location = 'http://en.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> <img src="http://en.reddit.com/static/spreddit7.gif" alt="submit to reddit" border="0" /> </a>
+</li>
+</ul>
+
+<script>
+  
+(function(doc, script) {
+  
+    // Async Social Buttons
+    var js, 
+        fjs = doc.getElementsByTagName(script)[0],
+        add = function(url, id) {
+            if (doc.getElementById(id)) {return;}
+            js = doc.createElement(script);
+            js.src = url;
+            id && (js.id = id);
+            fjs.parentNode.insertBefore(js, fjs);
+        };
+
+    // Twitter SDK
+    add('//platform.twitter.com/widgets.js', 'twitter-wjs');
+    
+    // Google+ button
+    add('https://apis.google.com/js/plusone.js');
+    
+    // Hacker News Button   
+      var hn_like = document.createElement('iframe');
+      hn_like.frameborder="no";
+      hn_like.scrolling="no";
+      hn_like.height="28px";
+      hn_like.width="110px";
+      hn_like.src = "http://hnlike.com/upvote.php?link="
+                    + encodeURIComponent(document.location)
+                    + "&title="
+                    + encodeURIComponent("{{ page.title }}");
+      hn_like.innerHTML="iframes not supported by your browser";
+      
+      var where = document.getElementById("hnews");
+      where.parentNode.insertBefore(
+        hn_like,
+        where
+      );
+}(document, 'script'));
+
+</script>
+

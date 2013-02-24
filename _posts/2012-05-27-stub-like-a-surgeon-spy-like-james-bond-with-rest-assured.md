@@ -3,7 +3,9 @@ layout: post
 title: "Stub like a surgeon, spy like James Bond with REST-assured"
 description: ""
 category: 
-tags: [testing REST]
+tags:
+  - testing
+  - REST
 ---
 {% include JB/setup %}
 

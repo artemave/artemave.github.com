@@ -1,15 +1,33 @@
 ---
-layout: page
-title: Artem Avetisyan
+layout: default
+title: Artem's dev blog
 ---
 {% include JB/setup %}
+<div id="page">
 
-{% assign post = site.posts.first %} 
+  {% assign post = site.posts.first %}
 
-<div class="page-header">
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  {% if post.date %}
-    <h6>{{ post.date | date_to_long_string }}</h6>
+  <div class="signature">
+    <span class="date">{{ post.date | date_to_long_string }}</span>
+    <div class="tags">
+      <span class='label'>Tags:</span>
+      <ul class="tag_box inline">
+        {% assign tags_list = post.tags %}
+        {% include JB/tags_list %}
+      </ul>
+    </div>
+  </div>
+
+  {{ post.content }}
+
+  <div class="prev-next">
+  {% if post.next %}
+    <a href="{{ post.next.url }}" class="next" title="{{ post.next.title }}">Next Post &rarr;</a>
   {% endif %}
-</div>
-{{ post.content }}
+  {% if post.previous %}
+    <a href="{{ post.previous.url }}" class="prev" title="{{ post.previous.title }}">&larr; Earlier Post</a>
+  {% endif %}
+  </div>
+  
+</div><!-- End Page -->

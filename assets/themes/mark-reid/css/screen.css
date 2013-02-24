@@ -49,6 +49,13 @@ h1,h2,h3,h4 {
 }
 h1 { margin-bottom: 1em; }
 h2 {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	margin:1.5em 0 1.5em 0;
+	font-weight:bold;
+}
+
+h3 {
 	font-size: 100%;
 	line-height: 1.5em;
 	margin:1.5em 0 1.5em 0;
@@ -83,8 +90,6 @@ sup { line-height: 1ex; }
 	-webkit-box-shadow: 2px 2px 8px #aaa;
 	-moz-box-shadow: 2px 2px 8px #aaa;	
 }
-
-#disqus_thread { padding-top: 0; }
 
 /* TODO
 #page { counter-reset: section; }
@@ -305,35 +310,32 @@ p.excerpt { margin: 0; }
 .excerpt { color: black; }
 
 /* @group Signature */
-.signature { 
-	margin-top: 3em; 
-	position: relative;
+.signature {
+  color: grey;
+  position: relative;
+  height: 3em;
 }
-.signature .author { 
-	font-variant: small-caps; 
-	font-style: normal; 
-	color: black;
-	display: block;
-	margin-bottom: 1.5em;
+.signature .tags { 
+  position: absolute;
+  right: 0;
 }
+
+.signature .tags .label {
+  display: inline-block;
+  position: absolute;
+  left: -41px;
+}
+
 .signature .date { 
-	font-size: 87.5%;
-	line-height: 1.5em;
-	display: block; 
-	font-variant: small-caps; 
-	font-style: normal; 
-	position: absolute;
-	right: 0;
-	top: 0;
+  position: absolute;
+  left:0;
+  font-size: 87.5%;
+  line-height: 1.5em;
+  font-variant: small-caps; 
+  font-style: normal; 
+  margin-bottom: 1.5em;
 }
-.signature .location { 
-	display: block; 
-	font-size: 87.5%;
-	line-height: 1.5em;
-	position: absolute;
-	right: 0;
-	top: 1.5em;
-}
+
 /* @end */
 
 /* @group Code */
@@ -526,8 +528,12 @@ img.maruku-png { }
 	list-style:none;
 	line-height:1.8em;
 }
+.tag_box.inline {
+  padding:0;
+}
 .tag_box.inline li {
-	float:left;
+  display:inline-block;
+	line-height:1em;
 }
 .tag_box a {
 	padding: 3px 6px;
@@ -547,3 +553,18 @@ img.maruku-png { }
 	color:#FFF;
 }
 
+ul.ulno {
+  padding-left:0;
+}
+.ulno li {
+  list-style: none;
+  display: inline-block;
+}
+
+.post-sharing {
+  text-align: center;
+}
+
+iframe {
+  border:0;
+}

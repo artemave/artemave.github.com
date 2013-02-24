@@ -3,7 +3,8 @@ layout: post
 title: "Better Shopify app integration testing"
 description: ""
 category: 
-tags: []
+tags:
+  - testing
 ---
 {% include JB/setup %}
 
@@ -175,7 +176,5 @@ VCR.configure do |c|
 {% endhighlight %}
 
 Also, when rerecording, do not use VCR record mode `:all` as it only overwrites the same requests and adds new ones, but does not wipe out the old unmatched ones. Simply remove fixture file instead.
-
-***********
 
 And that is about it! Simple, isn't it? But jokes apart, I believe fiddling with tests at such level is an investment in understanding your system better which in turn allows to find bugs earlier and fix them while in comfort zone (that is, while the context is in your head and the code is not in production) 

@@ -3,7 +3,9 @@ layout: post
 title: "Refactoring in command line and vim"
 description: ""
 category: 
-tags: [vim refactoring]
+tags:
+  - vim
+  - refactoring
 ---
 {% include JB/setup %}
 

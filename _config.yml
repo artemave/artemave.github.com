@@ -9,7 +9,7 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : "Artem Avetisyan"
+title : "def blog"
 #tagline: Site Tagline
 author :
   name : Artem Avetisyan
@@ -102,7 +102,15 @@ JB :
   # Set 'provider' to false to turn sharing off globally.
   #
   sharing :
-    provider : false
+    provider : all
+    twitter :
+      size :
+      via :
+      count :
+    googleplus :
+      size : medium
+      width :
+      annotation : bubble
     
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
