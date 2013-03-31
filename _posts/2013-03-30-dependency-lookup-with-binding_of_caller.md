@@ -146,6 +146,6 @@ Last, but not least. Unit testing this module is simple. The test just needs to 
 
 That is all I've got on dependency lookup with [binding_of_caller](https://github.com/banister/binding_of_caller) - an awesome little gem used by [pry-stack_explorer](https://github.com/pry/pry-stack_explorer) and [better_errors](https://github.com/charliesome/better_errors).
 
-It is worth mentioning that _it is all fun and games til someone has to maintain it_. I'll wait till then before start recommending the above approach... But you don't have to!
+It is worth mentioning that _it is all fun and games until someone gets to maintain it_. I'll wait till then before start recommending the above approach... But you don't have to!
 
 {% include JB/setup %}
