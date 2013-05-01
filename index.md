@@ -30,4 +30,4 @@ title: Artem's dev blog
   {% endif %}
   </div>
   
-</div><!-- End Page -->
+</div>
