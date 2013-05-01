@@ -53,4 +53,6 @@ Finally, to enable **proper mouse support**, in VM settings (System tab) uncheck
 <br>
 That is it. Fast emulator, comparable to that of iOS. If only Google had something like that in their sdk. But hey, that would mean what, no yak shaving? Unacceptable.
 
+![emulator](https://dl.dropboxusercontent.com/u/362737/android-emulator.jpg)
+
 {% include JB/setup %}
