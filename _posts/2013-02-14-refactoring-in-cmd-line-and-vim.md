@@ -66,9 +66,9 @@ The first two (including dynamic methods such as path helpers or AR finders) are
 
 Find all matching files and open them in vim:
 
-    % vim $(ack offline_deal -l app lib spec features config)
+    % vim $(ag offline_deal -l app lib spec features config)
 
-I am using [ack](http://betterthangrep.com/) - a popular alternative to grep. `-l` option tells it to only print names of files with matches, not the matches themselves (as it does by default). That list of file names is passed to vim so they are all opened in buffers.
+I am using [ag](https://github.com/ggreer/the_silver_searcher) - a faster alternative to [ack](http://betterthangrep.com/) (a popular alternative to grep). `-l` option tells it to only print names of files with matches, not the matches themselves (as it does by default). That list of file names is passed to vim so they are all opened in buffers.
 
 Now for each opened buffer let us perform the replace and save the changes:
 
