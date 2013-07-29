@@ -104,7 +104,7 @@ JB :
     provider : all
     twitter :
       size :
-      via :
+      via : artemave
       count :
     googleplus :
       size : medium
