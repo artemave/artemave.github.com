@@ -7,6 +7,8 @@ tags:
   - Android
 ---
 
+**UPDATE** _Setting up VirtualBox only makes sense on OSX. Lots of people suggested in comments that using KVM on Linux works just fine._
+
 A considerable amount of yak shaving, proportional to how big or new the next task is, normally accompanies my development activities. I am very new to Android development, so a lot of yak shaving has to happen before I start producing anything useful.
 
 This post itself is yak shaving and as such makes a good example of meta yak shaving (it is, and describes yak shaving). The described yak shaving is about speeding up android emulator, as you might have already guessed.

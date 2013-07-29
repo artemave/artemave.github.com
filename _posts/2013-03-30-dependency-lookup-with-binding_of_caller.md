@@ -8,6 +8,8 @@ tags:
   - rails
 ---
 
+**UPDATE** _Turns out `binding_of_caller` is not recommended for production apps_
+
 Rails project, RetailersController, products action, circa 2013 AD:
 
 {% highlight ruby %}
