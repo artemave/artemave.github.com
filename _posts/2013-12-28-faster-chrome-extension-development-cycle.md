@@ -20,9 +20,7 @@ Steps 2,3,4 really should not be there. Doing this over an over again just makes
 
 Turns out I am not the only one to feel that pain. There is an [Extenstion Reloader](https://chrome.google.com/webstore/detail/extensions-reloader/fimgfedafeadlieiabdeeaodndnlbhid) extension that, if combined with [Guard](https://github.com/guard/guard), automates those steps.
 
-There is a bit of setup. But really is just a bit. Assuming you've got a ruby interpreter and a terminal.
-
-The following setup works on OSX and, with minor adjustments, on Linux. Not sure if it applies to Windows.
+There is a bit of setup. But really is just a bit, assuming you've got a ruby interpreter and a terminal. It works on OSX and, with minor adjustments, on Linux. Not sure about Windows.
 
 Install `guard-shell` gem:
 
@@ -30,11 +28,13 @@ Install `guard-shell` gem:
 
 Add `Guardfile` to the root of your project with the following contents:
 
-    guard :shell do
-      watch /(js|css|html|json)$/ do
-        `open -g http://reload.extensions`
-      end
-    end
+{% highlight ruby %}
+guard :shell do
+  watch /(js|css|html|json)$/ do
+    `open -g http://reload.extensions`
+  end
+end
+{% endhighlight %}
 
 In a terminal, cd into project folder and run `guard`.
 
@@ -42,4 +42,4 @@ That is it. From now on, while guard is running, changing any file inside your p
 
 </br>
 
-One caveat though, looks like Extension Reloader does not reload changes in manifest.
+One caveat though, looks like Extension Reloader does not reload changes in manifest. Other than that, you got it!
