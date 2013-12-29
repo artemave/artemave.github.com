@@ -9,12 +9,13 @@ tags: [chrome extensions]
 
 Here is how developing chrome extension works out of the box:
 
- 1. make a change
- 1. open "extensions" page
- 1. find your extension there
- 1. hit reload
- 1. test the change
+1. make a change
+1. open "extensions" page
+1. find your extension there
+1. hit reload
+1. test the change
 
+<p></p>
 Steps 2,3,4 really should not be there. Doing this over an over again just makes me want to stop writing software and get into baby clothes instead.
 
 Turns out I am not the only one to feel that pain. There is an [Extenstion Reloader](https://chrome.google.com/webstore/detail/extensions-reloader/fimgfedafeadlieiabdeeaodndnlbhid) extension that, if combined with [Guard](https://github.com/guard/guard), automates those steps.
