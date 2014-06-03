@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git grep in vim"
+title: "Git a Grep on Vim"
 description: ""
 category: 
 tags:
@@ -15,7 +15,7 @@ I've been a happy user of [ag.vim][1] for years until recently I started to work
 
 Both of these are included when grepping the project and, man, this is annoying. And slow.
 
-So today I've had enough and decided to do something. Surprisingly, quick googling didn't reveal anything I could just copypaste somewhere, so I had to put on my bash ninja pyjamas and sort this out like a pro.
+So today I've had enough and decided to do something. Surprisingly, quick googling didn't reveal anything I could just copypaste somewhere, so I had to put on my bash pyjamas and sort this out like a pro.
 
 I've heard of `git-grep` and the plan was to bolt it in instead of a stock `ag`, but only if current vim folder is a git project (or a subfolder of one). This way none of the aformentioned types of files will be included in the search.
 
