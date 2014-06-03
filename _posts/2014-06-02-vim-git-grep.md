@@ -53,7 +53,7 @@ And voila, search. As in, The Search. Fast and furious.
 <hr>
 <br>
 
-If you don't use `ag.vim` then you can still use this with `vimgrep`. Just (in addition to the above) add this to `.vimrc`:
+If you don't use `ag.vim` then you can still use this with `vimgrep`. Just add this (in addition to the above) to `.vimrc`:
 
     let g:grepformat="%f:%l:%c:%m"
 
