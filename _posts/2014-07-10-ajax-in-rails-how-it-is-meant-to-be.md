@@ -155,6 +155,6 @@ So why is this better than returning html?
 
 Sometimes you need to run javascript before the ajax request is sent. Typical example would be to disable user control (link or button) while request is going on and maybe show a loading spinner or something. Rails provides a simple shortcut for disabling controls: remote buttons and links accept `disable_with` option that will disable a control while request is in progress optionally changing its text.
 
-Also, rails-ujs broadcasts a [number of events](https://github.com/rails/jquery-ujs/wiki/ajax#custom-events-fired-during-data-remote-requests) which can be used to trigger global loading indicator or something along those lines. 
+Also, jquery-ujs broadcasts a [number of events](https://github.com/rails/jquery-ujs/wiki/ajax#custom-events-fired-during-data-remote-requests) which can be used to trigger global loading indicator or something along those lines. 
 
 Obviously they can also be bound to specific links, forms and buttons but that is where it stops being pretty :)
