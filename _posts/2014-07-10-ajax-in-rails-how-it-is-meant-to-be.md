@@ -9,6 +9,8 @@ tags:
 
 {% include JB/setup %}
 
+_If you can use [turbolinks](https://github.com/rails/turbolinks) in your project, use it and read no further._
+
 Like so many others, the website I am currently working on is using client side js and ajax to make user experience snappier by not reloading page when they click links and buttons. But, ultimately, every user action results in a server call. No state is client side only.
 
 To do this, we intercept form submissions and link clicks in js, turn them into `$.ajax` and handle the json or html returned from the server in success handler. Pretty standard. And pretty repetetive too. Why so? Because every time code follows the same pattern of intercepting the user event, rebinding to `$.ajax` and handing the response. Over and over again.
