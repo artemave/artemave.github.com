@@ -9,7 +9,7 @@ tags:
 
 {% include JB/setup %}
 
-_If you can use [turbolinks](https://github.com/rails/turbolinks) in your project, use it and read no further._
+_If you can use [turbolinks](https://github.com/rails/turbolinks) (e.g. brand new project), use it and read no further. It'll cost you nothing and will get you a long way before you need anything more sophisticated._
 
 Like so many others, the website I am currently working on is using client side js and ajax to make user experience snappier by not reloading page when they click links and buttons. But, ultimately, every user action results in a server call. No state is client side only.
 
@@ -150,7 +150,7 @@ So why is this better than returning html?
 1. Less code. More specifically, less glue code. Glue code is repetitive and boring. Good riddance.
 2. No reference to the dom selector (of the comments form). Therefor, less coupling to maintain. Plus you don't have to make up names. Because _naming things is hard_.
 3. Better code location. In json/html example the js code can be anywhere. Which means, harder to find. Whereas js template can only be in one place (its controller view path - `views/comments`) and named after the action - `create.js.coffee`.
-4. Less client/server side code distinction. Apart from returning javascript instead of html, js template is no different from html one. The same erb and rails helpers are available there. This might be a subtle thing but it makes the development experience a bit less complicated.
+4. Less client/server side code distinction. Means: less layers in development stack. Apart from returning javascript instead of html, js template is no different from html one. The same erb and rails helpers are available there.
 5. No need to pass server side data to client js. That is where we normally start abusing html5 data attributes or simply store server side data (e.g. path helper values) in javascript variables on page load so it can be later accessed from javascript. Another bowl of glue.
 
 ## But what about "loading..."?
