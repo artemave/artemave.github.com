@@ -13,7 +13,7 @@ _If you can use [turbolinks](https://github.com/rails/turbolinks) in your projec
 
 Like so many others, the website I am currently working on is using client side js and ajax to make user experience snappier by not reloading page when they click links and buttons. But, ultimately, every user action results in a server call. No state is client side only.
 
-To do this, we intercept form submissions and link clicks in js, turn them into `$.ajax` and handle the json or html returned from the server in success handler. Pretty standard. And pretty repetetive too. Why so? Because every time code follows the same pattern of intercepting the user event, rebinding to `$.ajax` and handing the response. Over and over again.
+To do this, we intercept form submissions and link clicks in js, turn them into `$.ajax` and handle the json or html returned from the server in success handler. Pretty standard. And pretty repetitive too. Why so? Because every time code follows the same pattern of intercepting the user event, rebinding to `$.ajax` and handing the response. Over and over again.
 
 Rails is good in shortcutting common tasks away. And this case is no exception. Below I'll demonstrate what rails has to offer using a simplified example of posting a comment into the comments thread ([source code](https://github.com/artemave/railjax-demo))
 
@@ -34,7 +34,7 @@ end
 
 **views/comments/index.html.erb**:
 
-{% highlight ruby %}
+{% highlight erb %}
 <%= form_for Comment.new do |f| %>
   <%= f.text_area :text %>
   <%= f.submit %>
@@ -45,7 +45,7 @@ end
 
 **views/comments/_comment.html.erb**:
 
-{% highlight ruby %}
+{% highlight erb %}
 <div class="comment">
   <span><%= comment.text %></span>
   <span><%= comment.created_at %></span>
@@ -85,7 +85,7 @@ $(document).on "submit", "#new_comment", (e) ->
     $('.comment:last').after $newComment
 {% endhighlight %}
 
-This might not be the best way of client side rendering, but it immedatelly hightlights the problem of duplicate rendering of the same thing - comment - on the client and on the server. So, instead of returning json, let us reuse server side template and return html instead.
+This might not be the best way of client side rendering, but it immediately highlights the problem of duplicate rendering of the same thing - comment - on the client and on the server. So, instead of returning json, let us reuse server side template and return html instead.
 
 ## HTML way
 
@@ -149,7 +149,7 @@ So why is this better than returning html?
 
 1. Less code. More specifically, less glue code. Glue code is repetitive and boring. Good riddance.
 2. No reference to the dom selector (of the comments form). Therefor, less coupling to maintain. Plus you don't have to make up names. Because _naming things is hard_.
-3. Better code location. In json/html example the js code can be anywhere. Which means, harder to find. Whereas js template can only be in one place (its controller view path - `views/comments`) and named after the action - `create.js.cofee`.
+3. Better code location. In json/html example the js code can be anywhere. Which means, harder to find. Whereas js template can only be in one place (its controller view path - `views/comments`) and named after the action - `create.js.coffee`.
 4. Less client/server side code distinction. Apart from returning javascript instead of html, js template is no different from html one. The same erb and rails helpers are available there. This might be a subtle thing but it makes the development experience a bit less complicated.
 5. No need to pass server side data to client js. That is where we normally start abusing html5 data attributes or simply store server side data (e.g. path helper values) in javascript variables on page load so it can be later accessed from javascript. Another bowl of glue.
 
