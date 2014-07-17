@@ -160,3 +160,9 @@ Sometimes you need to run javascript before the ajax request is sent. Typical ex
 Also, jquery-ujs broadcasts a [number of events](https://github.com/rails/jquery-ujs/wiki/ajax#custom-events-fired-during-data-remote-requests) which can be used to trigger global loading indicator or something along those lines. 
 
 Obviously they can also be bound to specific links, forms and buttons but that is where it stops being pretty :)
+
+<br>
+
+_**UPDATE**_ (17 July 2014)
+
+Josh Chisholm suggested in comments a variation of js approach in which `AccountsController#create` redirects to `index` instead of rendering javascript ([commit](https://github.com/artemave/railjax-demo/commit/7bf73734eecf554070a56f5feadb44545b5d00bb)). The nice thing about it, is that there is no need for different `respond_to` based on type of request (html or js) in `create`. Request processing follows the same path regardless.
