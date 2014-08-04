@@ -8,6 +8,8 @@ tags:
 ---
 {% include JB/setup %}
 
+**UPDATE** _Combination of `.gitignore` and `.agignore` will do just fine (though it falls short on subdirectory specific ignores). So ignore the rest of this post._
+
 I've been a happy user of [ag.vim][1] for years until recently I started to work on a phonegap project. Two things are special about it:
 
 - ./node_modules
