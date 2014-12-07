@@ -6,6 +6,7 @@
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title>{{ page.title }} &larr; {{ page.top }}</title>
    <meta name="author" content="{{ site.author.name }}" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <link rel="start" href="{{ HOME_PATH }}" />
 
@@ -26,6 +27,7 @@
    <!-- Homepage CSS -->
    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/screen.css" type="text/css" />
 
+   <script src="{{ ASSET_PATH }}/javascript/header.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body id="{{ page.section }}">
 <div id="site">
@@ -35,6 +37,7 @@
     	<a href="{{ HOME_PATH }}" title="{{ site.title }}">{{ site.title }}</a>
     	<span class="byline">(<a href="https://github.com/artemave">{{ site.author.name }}</a>)</span>
     </h1>
+    <div id="menu-button"></div>
     <ul class="nav">
       <li><a class="home" href="{{ HOME_PATH }}">Home</a></li>
       <li><a  href="/archive.html">Archive</a></li>

@@ -202,10 +202,8 @@ ul.compact li a {
 
 /* @group Header */
 #header, #header a { color: silver; }
-#header .hover { color: transparent; }
 #header:hover a { color: black; text-shadow: #aaa 2px 2px 3px;}
 #header:hover a:hover { text-decoration: none; }
-#header a:hover .hover { color: silver; }
 #header {
 	position: relative;
 	font-variant: small-caps;
@@ -569,4 +567,75 @@ ul.ulno {
 
 iframe {
   border:0;
+}
+
+#menu-button {
+  display:none;
+  overflow: hidden;
+}
+
+@media all and (max-width: 450px) {
+  #site {
+    margin-top: 0.8em;
+    overflow:hidden;
+  }
+  #page {
+    border: none;
+    padding: 1em 1.5em 0 1.5em;
+  }
+
+  .highlight pre {
+    overflow: scroll;
+  }
+
+  #header {
+    padding-bottom: 0.8em;
+  }
+
+  #header h1 {
+    margin-left: 0.5em;
+  }
+
+  #header ul {
+    top: 2.15em;
+    right:0;
+    opacity:0;
+    z-index: 100;
+    padding-bottom:1.5em;
+    border-left: 1px solid silver;
+    box-shadow: #aaa 2px 2px 3px;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    transition:opacity 0.6s linear;
+  }
+  #header ul.show {
+    opacity:1;
+  }
+
+  #menu-button {
+    display: block;
+    position: absolute;
+    top: 0.3em;
+    right: 1.5em;
+    width: 25px;
+    height: 3px;
+    border-top: 10px double silver;
+    padding-bottom: 1px;
+    border-bottom: 3px solid silver;
+  }
+
+  #header ul li {
+    display: block;
+    margin-right: 1.5em;
+    margin-top: 1em;
+    border-bottom: 1px solid silver;
+  }
+  #header ul li a {
+    padding-right: 0;
+    display: block;
+  }
+
+  #footer {
+    display: none;
+  }
 }
