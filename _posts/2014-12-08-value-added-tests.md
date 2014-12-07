@@ -11,7 +11,7 @@ tags:
 
 **TL;DR**: high level acceptance test should focus, reveal and describe the value that a feature adds to the business.
 
-This statement is obvious once you "get it", but may sound remote and abstract if you don't. So let us leave it hanging around for a while and check out this (slightly adapted) real world example.
+This statement may be obvious once you "get it", but may sound remote and abstract if you don't. So let us leave it hanging around for a while and check out this (slightly adapted) real world example.
 
 Suppose we're a car retailer website. We'd like to introduce a "personal assistant" feature so that every time someone requests a quote, a member of our sales team gets assigned to it and an email introducing the assistant gets sent to the user. The auto assignment can be changed later from an admin interface.
 
