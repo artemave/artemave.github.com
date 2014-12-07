@@ -64,7 +64,7 @@ scenario "create assistant profile" do
 end
 {% endhighlight %}
 
-Wait, what? That makes no sense. Does Jessy create an assistant profile so that he can… create an assistant profile? Huh? This is clearly wrong. Let us think again. But no matter how hard we try, turns out, on its own, there is no better value in just creating assistant profiles. Which reveals the fact that there is _no_ value at all. And that is why sales haven't created any profiles yet. They are pragmatic and also busy. They’d only invest time in doing something if the return on that investment was worth it. (of course, in reality, there can be plenty of other reasons, but I am making a point here!)
+Wait, what? Does Jessy create an assistant profile so that he can… create an assistant profile? That makes no sense. Let us think again. But no matter how hard we try, turns out, on its own, there is no better value in just creating assistant profiles. Which reveals the fact that there is _no_ value at all. And that is why sales haven't created any profiles yet. They are pragmatic and also busy. They’d only invest time in doing something if the return on that investment was worth it. (of course, in reality, there can be plenty of other reasons, but I am making a point here!)
 
 So let us write something that adds value, shall we?
 
@@ -118,4 +118,4 @@ But this is not why I am mentioning it. One part of Gherkin is a feature narrati
 we’d like to make their experience more personal and engaging by assigning an "assistant" to each quote request.<br>
 Assistants will follow up on quotes and will be there to answer any questions.*
 
-So, yeah, The Value. It is an incredibly important thing to question. The earlier the better. Doing so costs little compared to what it can save. And going back to our tests, it is kind of hidden when the test is written as a sequence of actions, but a lot more obvious when it is written in terms of what users are trying to achieve and why.
+So, yeah, The Value. It is an incredibly important thing to question. The earlier the better. Doing so costs little compared to what it can save. And going back to our tests, it is kind of hidden when the test is written as a sequence of actions (imperative style), but a lot more obvious when it is written in terms of what users are trying to achieve and why (declarative style).
