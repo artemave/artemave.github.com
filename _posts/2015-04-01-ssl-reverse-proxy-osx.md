@@ -8,6 +8,8 @@ tags:
 ---
 {% include JB/setup %}
 
+_This is_ NOT _a joke._
+
 To test Google Game Services integration locally, I wanted my local machine to be accessible over https on something other than locahost or 127.0.0.1. So I decided to employ [localtest.me](http://readme.localtest.me/) and use nginx locally as ssl terminating reverse proxy to my app running on port 9999.
 
 Install nginx:
