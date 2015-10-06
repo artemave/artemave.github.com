@@ -30,7 +30,7 @@ By default VM is set to have 6GB of ram. You can adjust this in `Vagrantfile`.
 
 To get host/guest clipboard integration, install [XQuartz](http://xquartz.macosforge.org/landing/), set the pasteboard settings to look like this:
 
-![pasteboard settings][1]
+<img src="{{ site.url }}/assets/pasteboard.png" style="width: 100%;"/>
 
 and make sure XQuartz is running whenever you `vagrant ssh`.
 
@@ -57,5 +57,3 @@ To keep things simple I also dropped the `Vagrantfile` into the root of my fork.
 - static IP: `config.vm.network "private_network", ip: "192.168.33.10"`
 - ssh with X11 forwarding (for clipboard integration): `config.ssh.forward_x11 = true`
 - provision script: installs few useful packages (opinionated) and, most importantly, compiles Vim with X support (for clipboard integration) along with some other batteries (such as Lua support for [Unite.vim](https://github.com/Shougo/unite.vim)).
-
-  [1]: {{ site.url }}/assets/pasteboard.png

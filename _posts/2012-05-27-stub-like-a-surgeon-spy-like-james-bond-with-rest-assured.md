@@ -146,7 +146,7 @@ Then the record should be sent to The Vegan Police Intelligence Service
 
 &nbsp;
 
-![vegan police](http://images.wikia.com/scottpilgrim/images/4/47/Vegan_Police_Movie.jpg)
+<img src="{{ site.url }}/assets/Vegan_Police_Movie.jpg" style="width:100%;"/>
 
 &nbsp;
 
