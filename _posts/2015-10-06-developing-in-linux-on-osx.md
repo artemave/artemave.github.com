@@ -40,7 +40,7 @@ You can also build a VMware box (`--only=vmware-iso`), but I haven't tried it.
 
 When I say "development environment" what that really means is console development environment. I use [tmux](https://tmux.github.io/) for keeping sessions/windows per project, Vim as an editor and command line for everything else.
 
-This kind of setup is perfectly achievable in OSX of course. The main reason to move to Linux was the lack of native docker support for OSX. "But there is [docker-machine](https://docs.docker.com/installation/mac/) (former boot2docker)" I can hear you saying. And that is true. But there is also a range of minor issues (such as no support for host data volumes, or slow VirtualBox file sharing for when you want to develop against running container, or some more obscure ones) that come with it.
+This kind of setup is perfectly achievable in OSX of course. The main reason to move to Linux was the lack of native docker support for OSX. "But there is [docker-machine](https://docs.docker.com/installation/mac/) (former boot2docker)" I can hear you saying. And that is true. But there is also a range of minor issues (such as no support for host data volumes, or slow VirtualBox file sharing for when you want to develop against running container, or some more obscure ones) that come with it. It is just one more abstraction layer that will always get its toll.
 
 There are other good reasons to use Linux, but, perhaps, it was just that time of the year when one needs to shave a yak, so I thought why not, let us give it a go.
 
