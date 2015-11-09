@@ -23,10 +23,13 @@ If you happen to need something similar, then simply follow TLDR; below.
 - Install [Packer](https://www.packer.io/docs/installation.html), [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [Vagrant](https://docs.vagrantup.com/v1/installation/)
 - `git clone https://github.com/artemave/vagrant-boxes.git && cd vagrant-boxes`
 - `cd packer && packer build --only=virtualbox-iso -var 'DISK_SIZE=102400' ubuntu-15.04-server-amd64.json; cd ..` (disk size is in megabytes)
-- `vagrant box add ./builds/virtualbox/ubuntu-15.04-server-amd64_virtualbox.box`
+- `vagrant box add --name 'ubuntu-15.04-server-amd64' ./builds/virtualbox/ubuntu-15.04-server-amd64_virtualbox.box`
 - `vagrant up`
+- `vagrant ssh`
 
-By default VM is set to have 6GB of ram. You can adjust this in `Vagrantfile`.
+Provision script will create a user account on the vm with the same name as the user on the host machine you're running `vagrant up` from. Following Vagrant convention, the password is 'vagrant'.
+
+The default RAM size is set to 8gb. You can adjust this in `Vagrantfile`. Then `vagrant reload`.
 
 To get host/guest clipboard integration, install [XQuartz](http://xquartz.macosforge.org/landing/), set the pasteboard settings to look like this:
 
